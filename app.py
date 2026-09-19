@@ -20,7 +20,7 @@ if uploaded_file is not None:
         st.write(f"Late deliveries: {late_percent:.1f}% of total")
         top_late_zips = late_by_zip.head(3).to_string()
 
-        client = anthropic.Anthropic(api_key="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")
+        client = anthropic.Anthropic()
         response = client.messages.create(
             model="claude-sonnet-5",
             max_tokens=300,
